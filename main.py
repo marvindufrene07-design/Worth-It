@@ -1,4 +1,4 @@
-"""Run this file in PyCharm, then open http://127.0.0.1:8000."""
+"""Run this file in PyCharm, then open https://worthit-cyan.vercel.app/."""
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -14,7 +14,7 @@ class Handler(SimpleHTTPRequestHandler):
 if __name__ == '__main__':
     root = Path(__file__).resolve().parent / 'static'
     server = ThreadingHTTPServer(('127.0.0.1', 8000), partial(Handler, directory=str(root)))
-    print('Worth It? is ready at http://127.0.0.1:8000 (Ctrl+C to stop)')
+    print('Worth It? is ready at https://worthit-cyan.vercel.app/ (Ctrl+C to stop)')
     try:
         server.serve_forever()
     except KeyboardInterrupt:
